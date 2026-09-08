@@ -46,6 +46,22 @@ document.addEventListener('DOMContentLoaded', () => {
   if (drawerCloseBtn) drawerCloseBtn.addEventListener('click', closeDrawer);
   if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
 
+  // Auto close drawer when clicking any nav link inside mobile drawer
+  const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      closeDrawer();
+    });
+  });
+
+  // Close drawer and search on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeDrawer();
+      if (searchModalOverlay) searchModalOverlay.classList.remove('active');
+    }
+  });
+
   // 3. Search Modal Overlay
   const searchModalTrigger = document.getElementById('searchModalTrigger');
   const searchModalOverlay = document.getElementById('searchModalOverlay');
