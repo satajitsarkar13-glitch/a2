@@ -1,0 +1,998 @@
+<?php
+// HeartyMealStar - Artisan Gourmet Dinner Recipes & Hearthside Culinary Guild
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HeartyMealStar - Artisan Gourmet Dinner Recipes, Hearthside Feasts & Cast Iron Cooking</title>
+  <meta name="description" content="Master the art of unforgettable hearthside dinners. Explore deep collagen braising science, cast iron skillet searing, artisan sourdough pairings, and botanical reductions.">
+  <meta name="keywords" content="dinner recipes, artisan dinners, slow braising, cast iron cooking, hearth cooking, farm to table dinner, comfort feasts, sourdough levain, emulsion sauces">
+  <link rel="canonical" href="https://heartymealstar.com/">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0LY0HY7L01"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0LY0HY7L01');
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div id="readingProgressBar" class="reading-progress-bar"></div>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <span class="top-bar-item"><i class="fas fa-fire-burner"></i> Autumn Hearthside Supper Guild Now Open</span>
+        <span class="top-bar-item"><i class="fas fa-seedling"></i> 100% Farm-Direct Seasonal Harvest Guides</span>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-item"><i class="fas fa-book-open"></i> Over 180+ Tested Culinary Monographs</span>
+        <a href="contact.html" style="color:#FAF7F2; text-decoration:underline; margin-left:8px;">Join Supper Guild</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.php" class="brand-logo">
+        <div class="brand-logo-icon"><i class="fas fa-utensils"></i></div>
+        <span>HeartyMealStar</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.php" class="nav-link active">Home</a></li>
+          <li><a href="about.html" class="nav-link">Our Heritage</a></li>
+          <li><a href="blog.html" class="nav-link">Culinary Guides</a></li>
+          <li><a href="#configurator" class="nav-link">Dinner Planner</a></li>
+          <li><a href="#techniques" class="nav-link">Techniques</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="searchModalTrigger" class="icon-btn" aria-label="Search Recipes"><i class="fas fa-search"></i></button>
+        <button id="themeToggleBtn" class="icon-btn" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+        <a href="blog.html" class="btn btn-primary btn-sm">Explore Recipes</a>
+        <button id="mobileMenuToggle" class="icon-btn hamburger-btn" aria-label="Open Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="drawerOverlay" class="drawer-overlay"></div>
+  <div id="mobileDrawer" class="mobile-drawer">
+    <div class="mobile-drawer-header">
+      <a href="index.php" class="brand-logo">
+        <div class="brand-logo-icon"><i class="fas fa-utensils"></i></div>
+        <span>HeartyMealStar</span>
+      </a>
+      <button id="drawerCloseBtn" class="icon-btn" aria-label="Close Menu"><i class="fas fa-times"></i></button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.php">Home</a></li>
+      <li><a href="about.html">Our Heritage</a></li>
+      <li><a href="blog.html">Culinary Guides</a></li>
+      <li><a href="#configurator">Dinner Planner</a></li>
+      <li><a href="#techniques">Techniques</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div style="margin-top:auto; padding-top:2rem;">
+      <a href="blog.html" class="btn btn-primary" style="width:100%;">View All Guides</a>
+    </div>
+  </div>
+
+  <!-- Search Modal Overlay -->
+  <div id="searchModalOverlay" class="modal-overlay">
+    <div class="search-modal-box">
+      <div class="search-input-header">
+        <i class="fas fa-search" style="color:var(--primary); margin-right:12px; font-size:1.2rem;"></i>
+        <input type="text" id="liveSearchInput" placeholder="Search braises, cast iron techniques, reductions...">
+        <button id="searchCloseBtn" class="icon-btn" style="border:none; background:none;" aria-label="Close search"><i class="fas fa-times"></i></button>
+      </div>
+      <div id="searchResultsContainer" class="search-results-list">
+        <p style="color:var(--text-muted); font-size:0.88rem;">Type a culinary keyword or browse popular topics...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1. Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="badge"><i class="fas fa-fire"></i> The Art of Slow Hearthside Gastronomy</span>
+          <h1 class="hero-title">Elevate Your Evening Feasts with <span>Artisan Precision</span> & Soulful Comfort.</h1>
+          <p class="hero-lead">
+            Welcome to HeartyMealStar, the definitive culinary guild for extraordinary home dinners. We bridge classic thermal physics, slow collagen hydrolysis, cast iron searing, and farm-to-table seasonal harvests to transform every evening meal into an unforgettable celebration of flavor, aroma, and community.
+          </p>
+          <div class="hero-actions">
+            <a href="blog.html" class="btn btn-primary btn-lg"><i class="fas fa-fire-burner"></i> Discover Dinner Guides</a>
+            <a href="#configurator" class="btn btn-outline btn-lg"><i class="fas fa-sliders-h"></i> Interactive Dinner Planner</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-card">
+              <span class="stat-number">180+</span>
+              <span class="stat-label">Artisan Dinner Guides</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">48k+</span>
+              <span class="stat-label">Dinner Guild Members</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Kitchen Tested Ratios</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-media">
+          <div class="hero-media-card">
+            <img src="images/dinner-roast-chicken-herbs-castiron.jpg" alt="Golden roasted herb chicken in rustic cast iron skillet" width="1200" height="800">
+            <div class="hero-floating-badge">
+              <div class="hero-badge-title"><i class="fas fa-award" style="color:var(--primary); margin-right:6px;"></i> Featured Hearth Dish</div>
+              <div class="hero-badge-desc">Cast-Iron Braised Heritage Roast with Fresh Rosemary & Botanical Pan Reduction</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Core Pillars / Culinary Bedrock -->
+  <section class="section section-surface">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge"><i class="fas fa-compass"></i> Our Culinary Philosophy</span>
+        <h2 class="section-title">The Six Bedrocks of Hearthside Excellence</h2>
+        <p class="section-subtitle">
+          Great dinners do not happen by accident. They are engineered through thermal discipline, quality ingredient sourcing, and precise timing.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="feature-card">
+          <div class="feature-icon-wrapper"><i class="fas fa-cubes"></i></div>
+          <h3>Thermal Inertia & Cast Iron</h3>
+          <p>
+            Heavy cast iron and thick enameled Dutch ovens provide unmatched heat retention, creating uniform radiant heat that gently penetrates dense proteins without scorching delicate aromatics or causing pan hot spots.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-wrapper"><i class="fas fa-hourglass-half"></i></div>
+          <h3>Slow Gelatin Hydrolysis</h3>
+          <p>
+            By sustaining liquid temperatures between 160°F and 190°F over multiple hours, tough collagen bonds dissolve into silky gelatin, producing succulent, fall-apart texture and rich, glossy mouthfeel.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-wrapper"><i class="fas fa-bread-slice"></i></div>
+          <h3>Wild Fermented Levain</h3>
+          <p>
+            Every magnificent dinner deserves artisanal bread. Our slow-fermented sourdoughs feature open crumb architecture designed specifically to cradle velvety braising jus and luscious pan sauces.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-wrapper"><i class="fas fa-flask"></i></div>
+          <h3>Emulsion & Pan Reduction</h3>
+          <p>
+            We transform fond—the caramelized sugars and amino acids left on the skillet floor—into glossy, satin pan sauces using cold butter monté au beurre and concentrated botanical stock reductions.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-wrapper"><i class="fas fa-seedling"></i></div>
+          <h3>Seasonal Farm Provenance</h3>
+          <p>
+            We celebrate heirloom vegetables, heritage livestock, and stone-milled ancient grains harvested at peak nutritional density from sustainable regional agricultural partners and local growers.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-wrapper"><i class="fas fa-smog"></i></div>
+          <h3>Hardwood Aromatic Smoke</h3>
+          <p>
+            Hearth roasting harnesses the gentle aromatic volatile compounds of seasoned white oak, pecan, and applewood, imparting subtle caramel and timber depth to savory evening roasts and simmered casseroles.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Interactive Dinner Tasting & Braise Configurator -->
+  <section id="configurator" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge-secondary"><i class="fas fa-sliders-h"></i> Interactive Kitchen Tool</span>
+        <h2 class="section-title">The Hearthside Dinner & Braise Planner</h2>
+        <p class="section-subtitle">
+          Select your evening dining occasion, protein or vegetable centerpiece, and desired cooking vessel to compute optimal thermal settings and culinary schedules.
+        </p>
+      </div>
+
+      <div class="planner-widget">
+        <div class="planner-grid">
+          <div class="planner-controls">
+            <div class="form-group">
+              <label class="form-label" for="dinnerOccasion"><i class="fas fa-calendar-day"></i> Dinner Occasion</label>
+              <select id="dinnerOccasion" class="form-select">
+                <option value="weekend">Weekend Hearthside Feast (Extended Slow Braise)</option>
+                <option value="weeknight">Express Weeknight Skillet (Under 45 Minutes)</option>
+                <option value="celebration">Supper Guild Gathering (Multi-Course Showpiece)</option>
+                <option value="cozy">Rainy Evening Comfort Stew (Dutch Oven Simmer)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="dinnerProtein"><i class="fas fa-drumstick-bite"></i> Centerpiece Ingredient</label>
+              <select id="dinnerProtein" class="form-select">
+                <option value="beef">Heritage Beef Shank / Short Ribs</option>
+                <option value="poultry">Pasture-Raised Whole Heritage Chicken</option>
+                <option value="lamb">Grass-Fed Braised Lamb Shank</option>
+                <option value="veg">Roasted Root Squash & Heirloom Beans</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="dinnerMethod"><i class="fas fa-fire-burner"></i> Primary Thermal Technique</label>
+              <select id="dinnerMethod" class="form-select">
+                <option value="braise">Enclosed Dutch Oven Low Braise</option>
+                <option value="roast">High-Radiance Oven Hearth Roast</option>
+                <option value="sear">Cast Iron High-Heat Pan Sear & Baste</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="planner-result-card">
+            <div class="planner-result-header">
+              <span class="badge" style="margin-bottom:0.4rem;">Computed Culinary Protocol</span>
+              <h3 id="configResultTitle" class="planner-result-title">Heritage Beef Shank with Enclosed Dutch Oven Low Braise</h3>
+              <p id="configResultSubtitle" class="planner-result-subtitle">Calibrated for complete connective tissue breakdown and rich gelatin broth extraction.</p>
+            </div>
+
+            <div class="planner-stats-row">
+              <div class="planner-stat-box">
+                <div id="configResultTemp" class="planner-stat-val">275°F - 300°F</div>
+                <div class="planner-stat-desc">Oven Ambient Temp</div>
+              </div>
+              <div class="planner-stat-box">
+                <div id="configResultTime" class="planner-stat-val">3.5 - 4 Hours</div>
+                <div class="planner-stat-desc">Target Duration</div>
+              </div>
+              <div class="planner-stat-box">
+                <div class="planner-stat-val">195°F Core</div>
+                <div class="planner-stat-desc">Internal Target</div>
+              </div>
+            </div>
+
+            <div style="font-size:0.9rem; color:var(--text); margin-top:0.5rem;">
+              <strong>Recommended Braising Liquid:</strong>
+              <span id="configResultLiquid" style="color:var(--text-muted); display:block; margin-top:0.2rem;">Concentrated Beef Broth & Grape Must Reduction</span>
+            </div>
+
+            <div id="configResultTip" class="planner-tips-box">
+              Maintain tight Dutch oven lid seal to prevent evaporation and promote collagen conversion.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Featured Seasonal Dinner Monographs (Links exclusively to blog.html) -->
+  <section class="section section-surface">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge"><i class="fas fa-newspaper"></i> Seasonal Masterpieces</span>
+        <h2 class="section-title">Tested Hearthside Dinner Collections</h2>
+        <p class="section-subtitle">
+          Explore our most celebrated dinner preparations, each accompanied by comprehensive thermal schedules, step-by-step guidance, and artisanal bread pairings.
+        </p>
+      </div>
+
+      <div class="grid-4">
+        <div class="recipe-card">
+          <div class="recipe-card-media">
+            <img src="images/dinner-handmade-pasta-parmesan.jpg" alt="Handmade pasta with aged parmesan and herb emulsion" width="600" height="400">
+            <span class="recipe-tag">Handmade Pasta</span>
+            <span class="recipe-time-badge"><i class="far fa-clock"></i> 45 Mins</span>
+          </div>
+          <div class="recipe-card-body">
+            <div class="recipe-meta-row">
+              <span><i class="fas fa-signal"></i> Intermediate</span>
+              <span><i class="fas fa-users"></i> Serves 4</span>
+            </div>
+            <h3 class="recipe-card-title"><a href="blog.html">Velvety Tagliatelle with Roasted Garlic & Herb Emulsion</a></h3>
+            <p class="recipe-card-text">
+              Fresh yolk-rich pasta extruded by hand, tossed in a glossy starchy pan emulsion with roasted garlic purée, sweet butter, and aged hard cheese.
+            </p>
+            <div class="recipe-specs-list">
+              <div class="recipe-spec-item"><strong>Hydration:</strong><span>57% Egg Yolk</span></div>
+              <div class="recipe-spec-item"><strong>Sauce Base:</strong><span>Monté au Beurre</span></div>
+            </div>
+            <a href="blog.html" class="btn btn-outline btn-sm">Read Culinary Guide <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="recipe-card">
+          <div class="recipe-card-media">
+            <img src="images/dinner-truffle-risotto-skillet.jpg" alt="Creamy wild mushroom risotto in seasoned cast iron skillet" width="600" height="400">
+            <span class="recipe-tag">Cast Iron Skillet</span>
+            <span class="recipe-time-badge"><i class="far fa-clock"></i> 55 Mins</span>
+          </div>
+          <div class="recipe-card-body">
+            <div class="recipe-meta-row">
+              <span><i class="fas fa-signal"></i> Advanced</span>
+              <span><i class="fas fa-users"></i> Serves 6</span>
+            </div>
+            <h3 class="recipe-card-title"><a href="blog.html">Skillet Truffle Risotto with Foraged Forest Mushrooms</a></h3>
+            <p class="recipe-card-text">
+              Carnaroli rice toasted in heritage tallow, slowly hydrated with simmering aromatic vegetable stock and finished with foraged chanterelles.
+            </p>
+            <div class="recipe-specs-list">
+              <div class="recipe-spec-item"><strong>Starch Release:</strong><span>Amylopectin Agitation</span></div>
+              <div class="recipe-spec-item"><strong>Finishing:</strong><span>Cultured Butter Mantecatura</span></div>
+            </div>
+            <a href="blog.html" class="btn btn-outline btn-sm">Read Culinary Guide <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="recipe-card">
+          <div class="recipe-card-media">
+            <img src="images/dinner-autumn-harvest-squash-stew.jpg" alt="Rich autumn harvest squash stew with hearth spices" width="600" height="400">
+            <span class="recipe-tag">Slow Stew</span>
+            <span class="recipe-time-badge"><i class="far fa-clock"></i> 90 Mins</span>
+          </div>
+          <div class="recipe-card-body">
+            <div class="recipe-meta-row">
+              <span><i class="fas fa-signal"></i> Easy</span>
+              <span><i class="fas fa-users"></i> Serves 8</span>
+            </div>
+            <h3 class="recipe-card-title"><a href="blog.html">Autumn Harvest Butternut Pot with Sage & Caramelized Leeks</a></h3>
+            <p class="recipe-card-text">
+              Charred sweet squash simmered in golden vegetable broth with crispy sage leaves, toasted pepitas, and heirloom cannellini beans.
+            </p>
+            <div class="recipe-specs-list">
+              <div class="recipe-spec-item"><strong>Simmer Temp:</strong><span>185°F Low</span></div>
+              <div class="recipe-spec-item"><strong>Bread Pairing:</strong><span>Crusty Levain Boule</span></div>
+            </div>
+            <a href="blog.html" class="btn btn-outline btn-sm">Read Culinary Guide <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="recipe-card">
+          <div class="recipe-card-media">
+            <img src="images/dinner-seafood-paella-harvest.jpg" alt="Cast iron hearth seafood dinner with saffron broth" width="600" height="400">
+            <span class="recipe-tag">Hearth Roast</span>
+            <span class="recipe-time-badge"><i class="far fa-clock"></i> 50 Mins</span>
+          </div>
+          <div class="recipe-card-body">
+            <div class="recipe-meta-row">
+              <span><i class="fas fa-signal"></i> Intermediate</span>
+              <span><i class="fas fa-users"></i> Serves 6</span>
+            </div>
+            <h3 class="recipe-card-title"><a href="blog.html">Cast-Iron Saffron Harvest Paella with Botanical Broth</a></h3>
+            <p class="recipe-card-text">
+              Bomba rice cooked over open hearth embers, forming a caramelized socarrat bottom crust infused with saffron, sweet peppers, and fresh herbs.
+            </p>
+            <div class="recipe-specs-list">
+              <div class="recipe-spec-item"><strong>Crust Style:</strong><span>Crispy Socarrat</span></div>
+              <div class="recipe-spec-item"><strong>Broth Base:</strong><span>Saffron & Herb Infusion</span></div>
+            </div>
+            <a href="blog.html" class="btn btn-outline btn-sm">Read Culinary Guide <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Maillard Reaction & Thermal Dynamics -->
+  <section id="techniques" class="section section-dark">
+    <div class="container">
+      <div class="grid-2" style="align-items:center;">
+        <div>
+          <span class="badge badge-secondary"><i class="fas fa-atom"></i> Kitchen Physics</span>
+          <h2>The Thermodynamics of the Perfect Maillard Crust</h2>
+          <p>
+            The signature flavor of a world-class dinner relies on the Maillard reaction—a chemical reaction between amino acids and reducing sugars that occurs rapidly above 285°F (140°C).
+          </p>
+          <p>
+            When surface moisture is completely eradicated through salt dry-brining and high thermal mass cast iron contact, hundreds of new aromatic flavor compounds are born. These savory, nutty, and roasted notes form the backbone of your dish and enrich your pan deglazing liquid.
+          </p>
+          <div style="margin-top:2rem; display:flex; flex-direction:column; gap:1.25rem;">
+            <div style="display:flex; align-items:flex-start; gap:1rem;">
+              <i class="fas fa-check-circle" style="color:var(--secondary); font-size:1.3rem; margin-top:3px;"></i>
+              <div>
+                <strong style="color:#FFF;">Moisture Elimination:</strong>
+                <p style="margin:0; font-size:0.9rem; color:#B5C2BA;">Dry surface protein on wire racks for 12 hours in the refrigerator prior to searing.</p>
+              </div>
+            </div>
+            <div style="display:flex; align-items:flex-start; gap:1rem;">
+              <i class="fas fa-check-circle" style="color:var(--secondary); font-size:1.3rem; margin-top:3px;"></i>
+              <div>
+                <strong style="color:#FFF;">Thermal Mass Maintenance:</strong>
+                <p style="margin:0; font-size:0.9rem; color:#B5C2BA;">Use heavy-gauge cast iron to prevent skillet temperature drops when raw meat hits the pan.</p>
+              </div>
+            </div>
+            <div style="display:flex; align-items:flex-start; gap:1rem;">
+              <i class="fas fa-check-circle" style="color:var(--secondary); font-size:1.3rem; margin-top:3px;"></i>
+              <div>
+                <strong style="color:#FFF;">Aromatic Fond Extraction:</strong>
+                <p style="margin:0; font-size:0.9rem; color:#B5C2BA;">Deglaze with rich botanical broth or grape must to lift every caramelized micron into the sauce.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div style="border-radius:var(--radius-xl); overflow:hidden; border:4px solid var(--dark-border); box-shadow:var(--shadow-lg);">
+            <img src="images/dinner-copper-pots-kitchen-line.jpg" alt="Commercial culinary copper pots and pans on kitchen line" width="1200" height="800">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Collagen Breakdown & Simmer Matrix Table -->
+  <section class="section section-surface">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge"><i class="fas fa-table"></i> Reference Guide</span>
+        <h2 class="section-title">The Master Braising & Collagen Hydrolysis Matrix</h2>
+        <p class="section-subtitle">
+          Consult our laboratory-tested temperature milestones to achieve tender, velvety texture across diverse heritage cuts and hearty vegetables.
+        </p>
+      </div>
+
+      <div class="table-responsive">
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>Catering Cut / Ingredient</th>
+              <th>Connective Tissue Density</th>
+              <th>Optimal Simmer Temp</th>
+              <th>Estimated Duration</th>
+              <th>Recommended Braising Broth</th>
+              <th>Target Finish Core Temp</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Bone-In Beef Short Ribs</strong></td>
+              <td>Very High (Heavy Collagen)</td>
+              <td>275°F - 290°F (135°C)</td>
+              <td>3.5 - 4.5 Hours</td>
+              <td>Dark Roasted Veal Stock & Grape Must</td>
+              <td>203°F (95°C)</td>
+            </tr>
+            <tr>
+              <td><strong>Heritage Pasture Pork Shoulder</strong></td>
+              <td>High (Intermuscular Collagen)</td>
+              <td>300°F (149°C)</td>
+              <td>3.0 - 4.0 Hours</td>
+              <td>Caramelized Onion & Apple Cider Reduction</td>
+              <td>198°F (92°C)</td>
+            </tr>
+            <tr>
+              <td><strong>Pastured Lamb Shanks</strong></td>
+              <td>Very High (Dense Tendons)</td>
+              <td>285°F (140°C)</td>
+              <td>3.5 - 4.0 Hours</td>
+              <td>Rosemary, Garlic & Tomato Broth</td>
+              <td>201°F (94°C)</td>
+            </tr>
+            <tr>
+              <td><strong>Whole Braised Heritage Hen</strong></td>
+              <td>Moderate (Cartilage & Skin)</td>
+              <td>325°F (163°C)</td>
+              <td>1.5 - 2.0 Hours</td>
+              <td>Golden Roasted Allium & Thyme Broth</td>
+              <td>175°F (79°C) Thigh</td>
+            </tr>
+            <tr>
+              <td><strong>Heirloom Root Squash & Cabbage</strong></td>
+              <td>Low (Cellulose & Pectin)</td>
+              <td>350°F (177°C)</td>
+              <td>50 - 65 Minutes</td>
+              <td>Roasted Vegetable & Mushroom Umami Stock</td>
+              <td>Fork Tender / 190°F</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Step-by-Step Anatomy of the Perfect Braise -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge-sage"><i class="fas fa-list-ol"></i> Step-by-Step Masterclass</span>
+        <h2 class="section-title">The Four-Stage Anatomy of a Hearthside Braise</h2>
+        <p class="section-subtitle">
+          Follow this proven four-phase sequence to extract maximum flavor, succulent moisture, and glossy pan sauces every single time.
+        </p>
+      </div>
+
+      <div class="timeline-grid">
+        <div class="timeline-step">
+          <div class="timeline-step-num">1</div>
+          <h4>Deep Crust Sear</h4>
+          <p>
+            Heat raw cast iron or enameled iron over high heat. Sear seasoned dry meat undisturbed for 4-5 minutes per side until a mahogany Maillard crust develops across all exterior facets.
+          </p>
+        </div>
+
+        <div class="timeline-step">
+          <div class="timeline-step-num">2</div>
+          <h4>Aromatic Mirepoix Sweat</h4>
+          <p>
+            Remove the meat. Lower heat and add diced carrots, celery, leeks, and crushed garlic. Sauté gently until caramelized sugars release, absorbing the fond from the pan bottom.
+          </p>
+        </div>
+
+        <div class="timeline-step">
+          <div class="timeline-step-num">3</div>
+          <h4>Enclosed Low Simmer</h4>
+          <p>
+            Return meat to vessel. Add rich botanical reduction and simmer stock until liquid reaches two-thirds up the meat. Cover with heavy lid and transfer to 285°F oven for 3.5 hours.
+          </p>
+        </div>
+
+        <div class="timeline-step">
+          <div class="timeline-step-num">4</div>
+          <h4>Emulsion Pan Glaze</h4>
+          <p>
+            Transfer meat to a warm platter. Strain braising liquid, skim surface fat, and reduce over medium heat. Whisk in cold cultured butter to create a mirror-like velvet glaze to ladle over each portion.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Sustainable Farm Sourcing & Root Cellar Harvest -->
+  <section class="section section-surface">
+    <div class="container">
+      <div class="grid-2" style="align-items:center;">
+        <div>
+          <div style="border-radius:var(--radius-xl); overflow:hidden; border:4px solid var(--border); box-shadow:var(--shadow-md);">
+            <img src="images/dinner-artisan-cheese-harvest-board.jpg" alt="Artisan harvest dinner board with rustic farmhouse ingredients" width="1200" height="800">
+          </div>
+        </div>
+        <div>
+          <span class="badge"><i class="fas fa-seedling"></i> Earth & Soil Provenance</span>
+          <h2>Honoring the Farm-to-Table Rhythm</h2>
+          <p>
+            A truly hearty meal begins long before the skillet is ignited. It originates in mineral-rich, regeneratively farmed soil where heirloom root vegetables absorb complex earth sugars and pasture grasses nourish heritage breeds.
+          </p>
+          <p>
+            We curate our dinner recipes around the natural harvest calendar: crisp spring brassicas, fragrant summer nightshades, sweet autumnal winter squashes, and fermented root cellar preserves during the coldest winter months.
+          </p>
+          <div class="callout callout-sage">
+            <div class="callout-title"><i class="fas fa-leaf"></i> Root Cellar Wisdom</div>
+            <p>
+              Storing winter squash, garlic, and parsnips at 50°F with 60% humidity preserves natural starches while slowly converting complex carbohydrates into natural honey-like sugars that caramelize gorgeously during hearth roasting.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Artisan Sourdough Levain & Bread Accompaniments -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="grid-2" style="align-items:center;">
+        <div>
+          <span class="badge badge-secondary"><i class="fas fa-bread-slice"></i> Hearth Bakery</span>
+          <h2>The Essential Dinner Loaf: Levain Kinetics & Crumb Pairing</h2>
+          <p>
+            No dinner plate is complete without a thick slice of open-crumb, naturally leavened sourdough bread. Sourdough acidity cuts through the unctuous richness of braised meats and butter emulsions, resetting the palate between bites.
+          </p>
+          <p>
+            We teach the kinetics of wild yeast fermentation, long cold retards in the refrigerator, and the physics of steam-injected Dutch oven baking to produce a blistered, crackling crust with an airy, custardy interior.
+          </p>
+          <a href="blog.html" class="btn btn-primary" style="margin-top:1rem;"><i class="fas fa-book-open"></i> Read Bread monographs on Blog</a>
+        </div>
+        <div>
+          <div style="border-radius:var(--radius-xl); overflow:hidden; border:4px solid var(--border); box-shadow:var(--shadow-lg);">
+            <img src="images/dinner-castiron-skillet-pie.jpg" alt="Golden artisan hearth bread baked in cast iron" width="1200" height="800">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Non-Alcoholic Culinary Reductions & Emulsion Sauces -->
+  <section class="section section-surface">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge"><i class="fas fa-mortar-pestle"></i> Sauce Chemistry</span>
+        <h2 class="section-title">Mastering Non-Alcoholic Deglazing & Satin Emulsions</h2>
+        <p class="section-subtitle">
+          Achieve profound complexity, vibrant acidity, and luscious viscosity in your sauces without relying on synthetic flavorings or artificial additives.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="feature-card">
+          <div class="feature-icon-wrapper" style="background-color:var(--secondary-light); color:var(--secondary-hover);"><i class="fas fa-glass-water"></i></div>
+          <h3>Concentrated Grape Must Reduction</h3>
+          <p>
+            Simmering unfermented Concord or Barbera grape must with thyme, shallots, and cracked black pepper yields a glossy, deeply tannic glaze with natural fruit sugars that balance savory fats.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper" style="background-color:var(--sage-light); color:var(--sage);"><i class="fas fa-lemon"></i></div>
+          <h3>Botanical & Citrus Infusions</h3>
+          <p>
+            Steeping fresh rosemary, bay laurel, and citrus peel in boiling bone broth imparts high volatile terpenes and bright acidity that cut cleanly through rich braised meats.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper" style="background-color:var(--primary-glow); color:var(--primary);"><i class="fas fa-blender"></i></div>
+          <h3>Cold Butter Monté au Beurre</h3>
+          <p>
+            Whisking ice-cold diced cultured butter into hot, simmering pan reductions at 140°F creates a stable oil-in-water emulsion that coats the spoon with silky, shimmering elegance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Essential Cast Iron & Hearth Cookware Showcase -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge"><i class="fas fa-hammer"></i> Kitchen Armory</span>
+        <h2 class="section-title">Heirloom Tools for a Lifetime of Dinners</h2>
+        <p class="section-subtitle">
+          Invest in heirloom-grade cookware designed to withstand extreme thermal shifts and deliver consistent results for generations.
+        </p>
+      </div>
+
+      <div class="grid-4">
+        <div class="feature-card" style="text-align:center; align-items:center;">
+          <div class="feature-icon-wrapper"><i class="fas fa-circle-dot"></i></div>
+          <h4>12-Inch Raw Cast Iron Skillet</h4>
+          <p style="font-size:0.88rem;">Exceptional thermal mass for searing steaks, duck breasts, and baking savory skillet pies.</p>
+        </div>
+
+        <div class="feature-card" style="text-align:center; align-items:center;">
+          <div class="feature-icon-wrapper"><i class="fas fa-bowl-food"></i></div>
+          <h4>7.5-Quart Enameled Dutch Oven</h4>
+          <p style="font-size:0.88rem;">Heavy condensation lids and acidic-resistant enamel ideal for multi-hour liquid braises.</p>
+        </div>
+
+        <div class="feature-card" style="text-align:center; align-items:center;">
+          <div class="feature-icon-wrapper"><i class="fas fa-fire"></i></div>
+          <h4>Heavy Copper Saucier</h4>
+          <p style="font-size:0.88rem;">Instantaneous heat responsiveness for delicate egg emulsions, veloutés, and quick pan reductions.</p>
+        </div>
+
+        <div class="feature-card" style="text-align:center; align-items:center;">
+          <div class="feature-icon-wrapper"><i class="fas fa-shield-halved"></i></div>
+          <h4>High-Carbon Hand-Forged Knife</h4>
+          <p style="font-size:0.88rem;">Razor-sharp edge retention for precision mirepoix cuts and carving succulent roasted meats cleanly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. Meet the Hearthside Culinary Guild Mentors -->
+  <section class="section section-surface">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge"><i class="fas fa-user-graduate"></i> Guild Mentors</span>
+        <h2 class="section-title">The Culinary Minds Behind HeartyMealStar</h2>
+        <p class="section-subtitle">
+          Our editorial team combines decades of hearthside restaurant experience, thermal food science research, and artisanal fermentation practice.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="feature-card" style="text-align:center; align-items:center;">
+          <div style="width:100px; height:100px; border-radius:50%; background:linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color:#FFF; display:flex; align-items:center; justify-content:center; font-size:2.4rem; margin-bottom:1.25rem;">
+            <i class="fas fa-hat-chef"></i>
+          </div>
+          <h3>Chef Alistair Vance</h3>
+          <span style="font-size:0.84rem; color:var(--primary); font-weight:700; margin-bottom:0.75rem; display:block;">Executive Hearth Pitmaster</span>
+          <p style="font-size:0.9rem;">
+            Former wood-fire restaurant chef specializing in whole-animal butchery, live-fire ember roasting, and heritage livestock sourcing.
+          </p>
+        </div>
+
+        <div class="feature-card" style="text-align:center; align-items:center;">
+          <div style="width:100px; height:100px; border-radius:50%; background:linear-gradient(135deg, var(--sage) 0%, var(--secondary) 100%); color:#FFF; display:flex; align-items:center; justify-content:center; font-size:2.4rem; margin-bottom:1.25rem;">
+            <i class="fas fa-flask"></i>
+          </div>
+          <h3>Dr. Evelyn Thorne</h3>
+          <span style="font-size:0.84rem; color:var(--sage); font-weight:700; margin-bottom:0.75rem; display:block;">Food Biophysicist & Fermentation Specialist</span>
+          <p style="font-size:0.9rem;">
+            Researcher devoted to collagen hydrolysis thermodynamics, starch retrogradation, and natural sourdough microbiome kinetics.
+          </p>
+        </div>
+
+        <div class="feature-card" style="text-align:center; align-items:center;">
+          <div style="width:100px; height:100px; border-radius:50%; background:linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%); color:#FFF; display:flex; align-items:center; justify-content:center; font-size:2.4rem; margin-bottom:1.25rem;">
+            <i class="fas fa-seedling"></i>
+          </div>
+          <h3>Marcus Sterling</h3>
+          <span style="font-size:0.84rem; color:var(--secondary-hover); font-weight:700; margin-bottom:0.75rem; display:block;">Master Saucier & Agronomist</span>
+          <p style="font-size:0.9rem;">
+            Heritage crop conservationist and sauce architect focused on botanical pan reductions, farm-to-table root cellar preservation, and artisan broths.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13. Testimonials & Supper Guild Reviews -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge"><i class="fas fa-heart"></i> Guild Community</span>
+        <h2 class="section-title">Voices from the Hearthside Supper Table</h2>
+        <p class="section-subtitle">
+          Discover how home cooks and dedicated culinary enthusiasts have revolutionized their evening dinner routines with HeartyMealStar.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="testimonial-card">
+          <div>
+            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="testimonial-quote">
+              "The temperature guidance for braising short ribs changed my cooking entirely. I used to boil my meats at too high a temperature and wonder why they were tough. Following the 285°F collagen breakdown guide produced the most succulent, melt-in-mouth beef dinner our family has ever shared."
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">JC</div>
+            <div>
+              <div class="author-name">Julianna Croft</div>
+              <div class="author-role">Home Cook & Supper Club Host, Vermont</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div>
+            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="testimonial-quote">
+              "Their non-alcoholic grape must reduction technique gave our dinner roasts a velvety richness that rivaled any five-star restaurant. The explanation of monté au beurre emulsion physics is brilliantly clear and accessible."
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">DL</div>
+            <div>
+              <div class="author-name">David Lindqvist</div>
+              <div class="author-role">Culinary Enthusiast, Minnesota</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div>
+            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="testimonial-quote">
+              "The sourdough levain pairing guide with Dutch oven stews is pure genius. Baking the loaf with steam injection while the braise rests resulted in an unforgettable evening feast. HeartyMealStar is my absolute favorite culinary resource."
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">MS</div>
+            <div>
+              <div class="author-name">Marianne Sommer</div>
+              <div class="author-role">Artisan Baker & Dinner Host, Oregon</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14. Frequently Asked Questions (FAQ) -->
+  <section id="faq" class="section section-surface">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge"><i class="fas fa-circle-question"></i> Dinner Guidance</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Everything you need to know about our thermal braising methods, cookware seasoning, non-alcoholic sauces, and sourdough pairings.
+        </p>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>What is the difference between stewing, braising, and pot roasting?</span>
+            <div class="accordion-icon"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="accordion-content">
+            <p>
+              While all three are combination cooking methods involving searing and simmering in liquid, braising typically uses large, whole portions of meat immersed one-third to halfway in liquid. Pot roasting is essentially a large-cut braise without additional vegetables until late in cooking. Stewing involves bite-sized meat and vegetable pieces completely submerged in flavorful cooking liquid.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Why is low oven temperature (275°F-300°F) better than stovetop simmering for braises?</span>
+            <div class="accordion-icon"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Stovetop burners apply intense, direct conductive heat to the bottom of your pot, which can easily scorch ingredients and create rapid convective boiling that toughens meat proteins. An enclosed oven provides 360-degree radiant thermal energy, ensuring gentle, stable liquid temperatures between 180°F and 195°F where collagen dissolves into silky gelatin without protein knotting.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>How do you create deep, complex pan reductions using natural fruit musts and botanical broths?</span>
+            <div class="accordion-icon"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="accordion-content">
+            <p>
+              We utilize concentrated non-alcoholic fruit musts (such as unfermented tart cherry or dark grape must), aged botanical vinegars, roasted vegetable and bone stocks, and monté au beurre emulsions. These ingredients provide vibrant natural tannins, bright organic acids, and mouth-coating viscosity using pure, unfermented botanical extractions.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>How should I season and care for my heavy raw cast iron skillet after dinner cooking?</span>
+            <div class="accordion-icon"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Immediately after plating your dinner, deglaze any remaining debris with hot water and a stiff bristle brush (avoid harsh lye detergents). Dry the pan completely over medium heat on the stove, apply a micro-thin layer of high-smoke-point oil (such as grapeseed or cold-pressed flaxseed oil), and heat until lightly smoking to maintain an impenetrable polymerized seasoning layer.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Why is sourdough levain bread uniquely suited for hearty evening meals?</span>
+            <div class="accordion-icon"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="accordion-content">
+            <p>
+              The wild lactic and acetic acid bacteria present in natural levain create an open, resilient gluten matrix that absorbs sauces without disintegrating into mush. Furthermore, the mild lactic acidity cuts cleanly through rich animal fats and butter pan reductions, enhancing palate freshness throughout a multi-course dinner.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Are all HeartyMealStar recipes tested with standard home kitchen equipment?</span>
+            <div class="accordion-icon"><i class="fas fa-chevron-down"></i></div>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Yes. Every culinary monograph, temperature chart, and timing ratio is rigorously tested in standard residential ovens and on conventional stovetops using standard 10-inch to 12-inch cast iron skillets and 6-to-8 quart Dutch ovens.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 15. Hearthside Gazette Newsletter Signup -->
+  <section class="section section-surface" style="padding-top:1rem;">
+    <div class="container">
+      <div class="newsletter-card">
+        <span class="badge badge-secondary" style="margin-bottom:1rem;"><i class="fas fa-envelope"></i> Weekly Gazette</span>
+        <h2>Join the Hearthside Dinner Guild</h2>
+        <p>
+          Receive our weekly seasonal dinner menus, thermal roasting guides, farm harvest updates, and artisan baking schedules delivered directly to your inbox.
+        </p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email address..." required aria-label="Email address">
+          <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Subscribe Free</button>
+        </form>
+        <p style="font-size:0.8rem; color:#8E9A91; margin-top:1rem; margin-bottom:0;">
+          We value your privacy. Unsubscribe at any time with one click.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 16. Site Footer with Dynamic Year -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.php" class="brand-logo">
+            <div class="brand-logo-icon"><i class="fas fa-utensils"></i></div>
+            <span>HeartyMealStar</span>
+          </a>
+          <p>
+            The premier editorial guild for artisanal dinner recipes, hearthside thermal physics, cast iron culinary mastery, and farm-to-table seasonal feasts.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-icon" aria-label="RSS Feed"><i class="fas fa-rss"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Culinary Guides</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html">Slow Braising & Collagen Science</a></li>
+            <li><a href="blog.html">Cast Iron Searing & Maillard Crust</a></li>
+            <li><a href="blog.html">Artisan Sourdough Levain Breads</a></li>
+            <li><a href="blog.html">Emulsion Sauces & Monté au Beurre</a></li>
+            <li><a href="blog.html">Wood-Fired Hearth Roasting</a></li>
+            <li><a href="blog.html">Seasonal Root Cellar Preservation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Artisan Resources</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Our Hearth Heritage</a></li>
+            <li><a href="blog.html">Master Recipe Monographs</a></li>
+            <li><a href="#configurator">Interactive Dinner Planner</a></li>
+            <li><a href="#techniques">Thermal Science Matrix</a></li>
+            <li><a href="contact.html">Guild Inquiries & Support</a></li>
+            <li><a href="contact.html">Seasonal Supper Club Registration</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal & Policies</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="disclaimer.html">Culinary Disclaimer</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <?php echo date('Y'); ?> HeartyMealStar. All rights reserved. Artisan Hearthside Gastronomy.
+        </div>
+        <div class="footer-legal-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="cookies.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Banner -->
+  <div id="cookieBanner" class="cookie-banner">
+    <h4><i class="fas fa-cookie-bite" style="color:var(--secondary); margin-right:6px;"></i> Cookie & Experience Settings</h4>
+    <p>
+      HeartyMealStar uses essential cookies to ensure flawless site navigation, store your theme preferences, and optimize your culinary experience.
+    </p>
+    <div class="cookie-banner-actions">
+      <button id="cookieAcceptBtn" class="btn btn-primary btn-sm">Accept All</button>
+      <button id="cookieDeclineBtn" class="btn btn-outline btn-sm">Essential Only</button>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

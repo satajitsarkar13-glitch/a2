@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service - HeartyMealStar Culinary Guild</title>
+  <meta name="description" content="Terms and conditions governing the use of HeartyMealStar recipes, thermal guides, and culinary monographs.">
+  <link rel="canonical" href="https://heartymealstar.com/terms.html">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0LY0HY7L01"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0LY0HY7L01');
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div id="readingProgressBar" class="reading-progress-bar"></div>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <span class="top-bar-item"><i class="fas fa-fire-burner"></i> Autumn Hearthside Supper Guild Now Open</span>
+        <span class="top-bar-item"><i class="fas fa-seedling"></i> 100% Farm-Direct Seasonal Harvest Guides</span>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-item"><i class="fas fa-book-open"></i> Over 180+ Tested Culinary Monographs</span>
+        <a href="contact.html" style="color:#FAF7F2; text-decoration:underline; margin-left:8px;">Join Supper Guild</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.php" class="brand-logo">
+        <div class="brand-logo-icon"><i class="fas fa-utensils"></i></div>
+        <span>HeartyMealStar</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.php" class="nav-link ">Home</a></li>
+          <li><a href="about.html" class="nav-link ">Our Heritage</a></li>
+          <li><a href="blog.html" class="nav-link ">Culinary Guides</a></li>
+          <li><a href="index.php#configurator" class="nav-link">Dinner Planner</a></li>
+          <li><a href="index.php#techniques" class="nav-link">Techniques</a></li>
+          <li><a href="index.php#faq" class="nav-link">FAQ</a></li>
+          <li><a href="contact.html" class="nav-link ">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="searchModalTrigger" class="icon-btn" aria-label="Search Recipes"><i class="fas fa-search"></i></button>
+        <button id="themeToggleBtn" class="icon-btn" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+        <a href="blog.html" class="btn btn-primary btn-sm">Explore Recipes</a>
+        <button id="mobileMenuToggle" class="icon-btn hamburger-btn" aria-label="Open Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="drawerOverlay" class="drawer-overlay"></div>
+  <div id="mobileDrawer" class="mobile-drawer">
+    <div class="mobile-drawer-header">
+      <a href="index.php" class="brand-logo">
+        <div class="brand-logo-icon"><i class="fas fa-utensils"></i></div>
+        <span>HeartyMealStar</span>
+      </a>
+      <button id="drawerCloseBtn" class="icon-btn" aria-label="Close Menu"><i class="fas fa-times"></i></button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.php">Home</a></li>
+      <li><a href="about.html">Our Heritage</a></li>
+      <li><a href="blog.html">Culinary Guides</a></li>
+      <li><a href="index.php#configurator">Dinner Planner</a></li>
+      <li><a href="index.php#techniques">Techniques</a></li>
+      <li><a href="index.php#faq">FAQ</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div style="margin-top:auto; padding-top:2rem;">
+      <a href="blog.html" class="btn btn-primary" style="width:100%;">View All Guides</a>
+    </div>
+  </div>
+
+  <!-- Search Modal Overlay -->
+  <div id="searchModalOverlay" class="modal-overlay">
+    <div class="search-modal-box">
+      <div class="search-input-header">
+        <i class="fas fa-search" style="color:var(--primary); margin-right:12px; font-size:1.2rem;"></i>
+        <input type="text" id="liveSearchInput" placeholder="Search braises, cast iron techniques, reductions...">
+        <button id="searchCloseBtn" class="icon-btn" style="border:none; background:none;" aria-label="Close search"><i class="fas fa-times"></i></button>
+      </div>
+      <div id="searchResultsContainer" class="search-results-list">
+        <p style="color:var(--text-muted); font-size:0.88rem;">Type a culinary keyword or browse popular topics...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Terms Hero -->
+  <section class="section section-alt" style="padding: 4.5rem 0 3.5rem 0;">
+    <div class="container text-center" style="max-width:860px; margin:0 auto;">
+      <span class="badge"><i class="fas fa-file-contract"></i> Legal Agreement</span>
+      <h1>Terms of Service</h1>
+      <p class="section-subtitle">
+        Effective Date: January 1, 2026 | Last Updated: Autumn 2026
+      </p>
+    </div>
+  </section>
+
+  <!-- Terms Content -->
+  <section class="section section-surface">
+    <div class="container container-narrow article-content">
+      <h2>1. Acceptance of Terms</h2>
+      <p>
+        Welcome to HeartyMealStar (heartymealstar.com). By browsing, accessing, or utilizing any portion of this website, including our culinary monographs, temperature calculation tools, recipe databases, and community features, you agree to be bound legally by these Terms of Service ("Terms") and our accompanying Privacy Policy and Disclaimer.
+      </p>
+      <p>
+        If you do not agree to every provision contained within these Terms, you are prohibited from utilizing this platform and must exit immediately.
+      </p>
+
+      <h2>2. Intellectual Property Rights & Content Ownership</h2>
+      <p>
+        All materials published on HeartyMealStar—including but not limited to culinary text monographs, recipe formulas, thermal matrices, photography, infographics, UI layouts, interactive scripts, CSS code, brand icons, and editorial logos—are the exclusive intellectual property of HeartyMealStar and protected under United States and international copyright, trademark, and intellectual property statutes.
+      </p>
+      <ul>
+        <li><strong>Personal Non-Commercial License:</strong> You are granted a limited, non-exclusive, revocable license to access, view, and print single copies of recipes and guides solely for personal, non-commercial culinary use in your private home kitchen.</li>
+        <li><strong>Prohibited Reproduction:</strong> You may not systematically scrape, reproduce, republish, syndicate, sell, distribute, or modify our content, recipes, or photography for commercial distribution or integration into third-party websites without prior written authorization from HeartyMealStar.</li>
+      </ul>
+
+      <h2>3. Acceptable Use Policy</h2>
+      <p>
+        When interacting with HeartyMealStar, you agree to adhere strictly to all applicable local, national, and international laws. You agree that you will not:
+      </p>
+      <ul>
+        <li>Deploy automated crawlers, scrapers, data extraction tools, or bots to harvest content, images, or email addresses from our servers.</li>
+        <li>Transmit any malicious code, viruses, trojans, or disruptive software designed to compromise platform integrity.</li>
+        <li>Attempt to circumvent, disable, or tamper with security protocols, user authentication, or server configurations.</li>
+        <li>Impersonate any culinary guild member, editorial author, or staff member of HeartyMealStar in communications.</li>
+      </ul>
+
+      <h2>4. User Submissions & Community Feedback</h2>
+      <p>
+        If you submit culinary questions, recipe reviews, supper club testimonials, or suggestions to HeartyMealStar via our contact forms, email, or social channels, you grant us a perpetual, irrevocable, royalty-free, worldwide license to use, display, publish, and adapt such submissions in our editorial publications, educational guides, and community showcases.
+      </p>
+
+      <h2>5. Third-Party Links & External Resources</h2>
+      <p>
+        Our culinary guides may contain links to external third-party websites, including agricultural co-ops, regional farmer networks, and scientific reference databases. These links are provided solely for educational reference. HeartyMealStar exercises no editorial control over third-party platforms and assumes no responsibility for their content, privacy policies, or commercial practices.
+      </p>
+
+      <h2>6. Disclaimer of Warranties</h2>
+      <p>
+        HeartyMealStar is provided on an "as is" and "as available" basis without warranties of any kind, whether express or implied. While our editorial team rigorously tests every recipe and thermal protocol, we make no representations regarding the infallibility of recipes when executed under variable kitchen equipment, uncalibrated ovens, or altered ingredients.
+      </p>
+
+      <h2>7. Limitation of Liability</h2>
+      <p>
+        To the fullest extent permitted by applicable law, HeartyMealStar, its founders, chefs, scientists, authors, and affiliates shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising from your access to or inability to use this platform, including kitchen mishaps, equipment damage, food spoilage, or personal allergic reactions.
+      </p>
+
+      <h2>8. Indemnification</h2>
+      <p>
+        You agree to defend, indemnify, and hold harmless HeartyMealStar and its contributors against any claims, liabilities, damages, losses, and legal expenses arising from your violation of these Terms or your misuse of the platform.
+      </p>
+
+      <h2>9. Governing Law & Jurisdiction</h2>
+      <p>
+        These Terms shall be governed by and construed in accordance with the laws of the State of Vermont, United States, without regard to its conflict of law principles. Any legal proceedings arising from these Terms shall be resolved exclusively in the state or federal courts located in Chittenden County, Vermont.
+      </p>
+
+      <h2>10. Inquiries & Contact Details</h2>
+      <p>
+        For inquiries regarding these Terms of Service or to request commercial syndication licensing, please contact our legal desk at <a href="contact.html">guild@heartymealstar.com</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.php" class="brand-logo">
+            <div class="brand-logo-icon"><i class="fas fa-utensils"></i></div>
+            <span>HeartyMealStar</span>
+          </a>
+          <p>
+            The premier editorial guild for artisanal dinner recipes, hearthside thermal physics, cast iron culinary mastery, and farm-to-table seasonal feasts.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-icon" aria-label="RSS Feed"><i class="fas fa-rss"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Culinary Guides</h4>
+          <ul class="footer-links">
+            <li><a href="blog/the-science-of-slow-braising-collagen-breakdown-and-gelatin-hydrolysis.html">Slow Braising & Collagen Science</a></li>
+            <li><a href="blog/cast-iron-skillet-cooking-thermal-inertia-and-maillard-crust-chemistry.html">Cast Iron Searing & Maillard Crust</a></li>
+            <li><a href="blog/artisan-sourdough-levain-fermentation-kinetics-for-dinner-breads.html">Artisan Sourdough Levain Breads</a></li>
+            <li><a href="blog/culinary-emulsion-sauces-hollandaise-veloute-and-lipid-suspensions.html">Emulsion Sauces & Monté au Beurre</a></li>
+            <li><a href="blog/wood-fired-hearth-roasting-radiant-heat-and-aromatic-smoke-physics.html">Wood-Fired Hearth Roasting</a></li>
+            <li><a href="blog/farm-to-table-seasonal-harvest-preservation-and-root-cellar-storage.html">Seasonal Root Cellar Preservation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Artisan Resources</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Our Hearth Heritage</a></li>
+            <li><a href="blog.html">Master Recipe Monographs</a></li>
+            <li><a href="index.php#configurator">Interactive Dinner Planner</a></li>
+            <li><a href="index.php#techniques">Thermal Science Matrix</a></li>
+            <li><a href="contact.html">Guild Inquiries & Support</a></li>
+            <li><a href="contact.html">Seasonal Supper Club Registration</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal & Policies</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="disclaimer.html">Culinary Disclaimer</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 HeartyMealStar. All rights reserved. Artisan Hearthside Gastronomy.
+        </div>
+        <div class="footer-legal-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="cookies.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Banner -->
+  <div id="cookieBanner" class="cookie-banner">
+    <h4><i class="fas fa-cookie-bite" style="color:var(--secondary); margin-right:6px;"></i> Cookie & Experience Settings</h4>
+    <p>
+      HeartyMealStar uses essential cookies to ensure flawless site navigation, store your theme preferences, and optimize your culinary experience.
+    </p>
+    <div class="cookie-banner-actions">
+      <button id="cookieAcceptBtn" class="btn btn-primary btn-sm">Accept All</button>
+      <button id="cookieDeclineBtn" class="btn btn-outline btn-sm">Essential Only</button>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

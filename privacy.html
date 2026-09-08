@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - HeartyMealStar Culinary Guild</title>
+  <meta name="description" content="Comprehensive GDPR and CCPA privacy policy detailing data handling, cookies, and reader privacy rights on HeartyMealStar.">
+  <link rel="canonical" href="https://heartymealstar.com/privacy.html">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0LY0HY7L01"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0LY0HY7L01');
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div id="readingProgressBar" class="reading-progress-bar"></div>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <span class="top-bar-item"><i class="fas fa-fire-burner"></i> Autumn Hearthside Supper Guild Now Open</span>
+        <span class="top-bar-item"><i class="fas fa-seedling"></i> 100% Farm-Direct Seasonal Harvest Guides</span>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-item"><i class="fas fa-book-open"></i> Over 180+ Tested Culinary Monographs</span>
+        <a href="contact.html" style="color:#FAF7F2; text-decoration:underline; margin-left:8px;">Join Supper Guild</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.php" class="brand-logo">
+        <div class="brand-logo-icon"><i class="fas fa-utensils"></i></div>
+        <span>HeartyMealStar</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.php" class="nav-link ">Home</a></li>
+          <li><a href="about.html" class="nav-link ">Our Heritage</a></li>
+          <li><a href="blog.html" class="nav-link ">Culinary Guides</a></li>
+          <li><a href="index.php#configurator" class="nav-link">Dinner Planner</a></li>
+          <li><a href="index.php#techniques" class="nav-link">Techniques</a></li>
+          <li><a href="index.php#faq" class="nav-link">FAQ</a></li>
+          <li><a href="contact.html" class="nav-link ">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="searchModalTrigger" class="icon-btn" aria-label="Search Recipes"><i class="fas fa-search"></i></button>
+        <button id="themeToggleBtn" class="icon-btn" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+        <a href="blog.html" class="btn btn-primary btn-sm">Explore Recipes</a>
+        <button id="mobileMenuToggle" class="icon-btn hamburger-btn" aria-label="Open Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="drawerOverlay" class="drawer-overlay"></div>
+  <div id="mobileDrawer" class="mobile-drawer">
+    <div class="mobile-drawer-header">
+      <a href="index.php" class="brand-logo">
+        <div class="brand-logo-icon"><i class="fas fa-utensils"></i></div>
+        <span>HeartyMealStar</span>
+      </a>
+      <button id="drawerCloseBtn" class="icon-btn" aria-label="Close Menu"><i class="fas fa-times"></i></button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.php">Home</a></li>
+      <li><a href="about.html">Our Heritage</a></li>
+      <li><a href="blog.html">Culinary Guides</a></li>
+      <li><a href="index.php#configurator">Dinner Planner</a></li>
+      <li><a href="index.php#techniques">Techniques</a></li>
+      <li><a href="index.php#faq">FAQ</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div style="margin-top:auto; padding-top:2rem;">
+      <a href="blog.html" class="btn btn-primary" style="width:100%;">View All Guides</a>
+    </div>
+  </div>
+
+  <!-- Search Modal Overlay -->
+  <div id="searchModalOverlay" class="modal-overlay">
+    <div class="search-modal-box">
+      <div class="search-input-header">
+        <i class="fas fa-search" style="color:var(--primary); margin-right:12px; font-size:1.2rem;"></i>
+        <input type="text" id="liveSearchInput" placeholder="Search braises, cast iron techniques, reductions...">
+        <button id="searchCloseBtn" class="icon-btn" style="border:none; background:none;" aria-label="Close search"><i class="fas fa-times"></i></button>
+      </div>
+      <div id="searchResultsContainer" class="search-results-list">
+        <p style="color:var(--text-muted); font-size:0.88rem;">Type a culinary keyword or browse popular topics...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Privacy Hero -->
+  <section class="section section-alt" style="padding: 4.5rem 0 3.5rem 0;">
+    <div class="container text-center" style="max-width:860px; margin:0 auto;">
+      <span class="badge"><i class="fas fa-shield-halved"></i> Data Transparency</span>
+      <h1>Privacy Policy</h1>
+      <p class="section-subtitle">
+        Effective Date: January 1, 2026 | Last Updated: Autumn 2026
+      </p>
+    </div>
+  </section>
+
+  <!-- Privacy Content -->
+  <section class="section section-surface">
+    <div class="container container-narrow article-content">
+      <h2>1. Introduction & Scope of Commitment</h2>
+      <p>
+        At HeartyMealStar ("we," "our," "us," or the "Platform"), respecting and safeguarding the personal privacy of our culinary readers, supper club members, and newsletter subscribers is an absolute core priority. This comprehensive Privacy Policy describes the policies and procedures governing the collection, utilization, storage, processing, and protection of information gathered when you visit our website (heartymealstar.com), utilize our interactive dinner configurators, or subscribe to the Hearthside Gazette.
+      </p>
+      <p>
+        By accessing or utilizing any part of HeartyMealStar, you acknowledge that you have reviewed and understood the data practices outlined herein. If you do not agree with our policies, please discontinue your use of our platform.
+      </p>
+
+      <h2>2. Categories of Information We Collect</h2>
+      <p>
+        We collect only the minimum necessary information required to deliver high-quality culinary monographs, interactive cooking tools, and responsive digital services:
+      </p>
+      <ul>
+        <li><strong>Voluntary Subscriber Data:</strong> When you subscribe to our Hearthside Gazette, download temperature guides, or submit messages via our contact portal, we collect your name, email address, and inquiry details.</li>
+        <li><strong>Interactive Tool Parameters:</strong> When using our Dinner Course Tasting Configurator, selections such as dinner occasion, protein preference, and cooking technique are processed locally in your browser to render real-time results without storing personal identities on external databases.</li>
+        <li><strong>Automated Telemetry & Analytics:</strong> We collect non-personally identifiable technical telemetry including IP addresses (anonymized), browser types, referring URLs, operating systems, and page navigation patterns via Google Analytics (G-0LY0HY7L01) to optimize platform performance and monitor server health.</li>
+        <li><strong>Local Preference Tokens:</strong> We utilize client-side localStorage to remember your interface preferences, such as Dark Mode / Light Mode toggles and cookie acknowledgement statuses.</li>
+      </ul>
+
+      <h2>3. Purpose and Legal Grounds for Processing</h2>
+      <p>
+        HeartyMealStar processes personal and non-personal data under legitimate interest, contractual necessity, and explicit user consent for the following specific purposes:
+      </p>
+      <ul>
+        <li>To distribute our weekly culinary monographs, seasonal dinner menus, and thermal roasting guides to verified subscribers.</li>
+        <li>To ensure website stability, defend against malicious denial-of-service attempts, and troubleshoot front-end rendering anomalies.</li>
+        <li>To analyze aggregate traffic flows to determine which cooking techniques and seasonal ingredients resonate most with our community.</li>
+        <li>To respond promptly and professionally to direct reader inquiries, culinary consultation requests, and copyright notices.</li>
+      </ul>
+
+      <h2>4. Cookies & Web Tracking Technologies</h2>
+      <p>
+        Cookies are small text files placed on your device to facilitate smooth navigation and remember preferences. We categorize cookies into three distinct classes:
+      </p>
+      <ul>
+        <li><strong>Strictly Necessary Cookies:</strong> Essential for secure routing, page rendering, and enforcing basic security protocols. These cannot be disabled.</li>
+        <li><strong>Functional Preference Cookies:</strong> Used solely to remember your chosen theme state (Dark or Light) and local UI choices across browser sessions.</li>
+        <li><strong>Performance & Analytics Cookies:</strong> Aggregate anonymized traffic metrics that inform our editorial team regarding reader engagement. You may disable these at any time via our Cookie Settings banner.</li>
+      </ul>
+
+      <h2>5. Non-Disclosure & Third-Party Sharing Principles</h2>
+      <p>
+        HeartyMealStar strictly adheres to a zero-monetization policy regarding personal user data. We do not sell, rent, lease, trade, or distribute your email address, browsing habits, or personal identities to commercial advertisers, data brokers, or marketing syndicates.
+      </p>
+      <p>
+        Data is shared exclusively with vetted technical infrastructure partners (such as secure cloud hosting providers, encrypted CDN networks, and enterprise email distribution platforms) solely to the extent necessary to deliver platform services under strict data confidentiality agreements.
+      </p>
+
+      <h2>6. Data Security & Storage Architecture</h2>
+      <p>
+        We implement industry-standard cryptographic protocols including SSL/TLS 256-bit encryption for all data in transit across our servers. Our web architectures are audited regularly against unauthorized intrusions, data leakage, and vulnerability exploits. While no digital platform can claim absolute impenetrability, we maintain the highest standard of administrative, physical, and technological safeguards.
+      </p>
+
+      <h2>7. Global Data Rights (GDPR, CCPA & International Readers)</h2>
+      <p>
+        Regardless of your geographic location, HeartyMealStar respects your fundamental privacy rights. Depending on applicable laws in your jurisdiction (such as the EU General Data Protection Regulation or the California Consumer Privacy Act), you possess the right to:
+      </p>
+      <ul>
+        <li>Request access to any personal data associated with your email address stored on our platform.</li>
+        <li>Request the immediate rectification of inaccurate or outdated personal details.</li>
+        <li>Request the permanent erasure (right to be forgotten) of your subscriber profile from our active databases.</li>
+        <li>Opt out of any non-essential analytics tracking or marketing communications at any time.</li>
+      </ul>
+      <p>
+        To exercise any of these privacy rights, please submit a formal request to our Data Protection Coordinator at <a href="contact.html">guild@heartymealstar.com</a>. We will respond within 30 calendar days.
+      </p>
+
+      <h2>8. Children's Online Privacy Protection</h2>
+      <p>
+        Our culinary platform is directed toward adult culinary enthusiasts, home cooks, and families. We do not knowingly solicit or collect personal information from individuals under the age of 13 (or under 16 in certain jurisdictions). If you believe a minor has submitted personal information to our site, please contact us immediately for prompt deletion.
+      </p>
+
+      <h2>9. Updates to This Policy</h2>
+      <p>
+        We may occasionally update this Privacy Policy to reflect modifications in our editorial practices, technological enhancements, or evolving legal frameworks. All revisions will be posted to this page with an updated effective date. Continued use of HeartyMealStar following any revisions constitutes your acceptance of the updated terms.
+      </p>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.php" class="brand-logo">
+            <div class="brand-logo-icon"><i class="fas fa-utensils"></i></div>
+            <span>HeartyMealStar</span>
+          </a>
+          <p>
+            The premier editorial guild for artisanal dinner recipes, hearthside thermal physics, cast iron culinary mastery, and farm-to-table seasonal feasts.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-icon" aria-label="RSS Feed"><i class="fas fa-rss"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Culinary Guides</h4>
+          <ul class="footer-links">
+            <li><a href="blog/the-science-of-slow-braising-collagen-breakdown-and-gelatin-hydrolysis.html">Slow Braising & Collagen Science</a></li>
+            <li><a href="blog/cast-iron-skillet-cooking-thermal-inertia-and-maillard-crust-chemistry.html">Cast Iron Searing & Maillard Crust</a></li>
+            <li><a href="blog/artisan-sourdough-levain-fermentation-kinetics-for-dinner-breads.html">Artisan Sourdough Levain Breads</a></li>
+            <li><a href="blog/culinary-emulsion-sauces-hollandaise-veloute-and-lipid-suspensions.html">Emulsion Sauces & Monté au Beurre</a></li>
+            <li><a href="blog/wood-fired-hearth-roasting-radiant-heat-and-aromatic-smoke-physics.html">Wood-Fired Hearth Roasting</a></li>
+            <li><a href="blog/farm-to-table-seasonal-harvest-preservation-and-root-cellar-storage.html">Seasonal Root Cellar Preservation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Artisan Resources</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Our Hearth Heritage</a></li>
+            <li><a href="blog.html">Master Recipe Monographs</a></li>
+            <li><a href="index.php#configurator">Interactive Dinner Planner</a></li>
+            <li><a href="index.php#techniques">Thermal Science Matrix</a></li>
+            <li><a href="contact.html">Guild Inquiries & Support</a></li>
+            <li><a href="contact.html">Seasonal Supper Club Registration</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal & Policies</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="disclaimer.html">Culinary Disclaimer</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 HeartyMealStar. All rights reserved. Artisan Hearthside Gastronomy.
+        </div>
+        <div class="footer-legal-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="cookies.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Banner -->
+  <div id="cookieBanner" class="cookie-banner">
+    <h4><i class="fas fa-cookie-bite" style="color:var(--secondary); margin-right:6px;"></i> Cookie & Experience Settings</h4>
+    <p>
+      HeartyMealStar uses essential cookies to ensure flawless site navigation, store your theme preferences, and optimize your culinary experience.
+    </p>
+    <div class="cookie-banner-actions">
+      <button id="cookieAcceptBtn" class="btn btn-primary btn-sm">Accept All</button>
+      <button id="cookieDeclineBtn" class="btn btn-outline btn-sm">Essential Only</button>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

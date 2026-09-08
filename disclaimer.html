@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kitchen Safety & Food Disclaimer - HeartyMealStar</title>
+  <meta name="description" content="Food safety, internal meat temperature guidelines, cookware handling, and allergen disclosures for home cooks.">
+  <link rel="canonical" href="https://heartymealstar.com/disclaimer.html">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0LY0HY7L01"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0LY0HY7L01');
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div id="readingProgressBar" class="reading-progress-bar"></div>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <span class="top-bar-item"><i class="fas fa-fire-burner"></i> Autumn Hearthside Supper Guild Now Open</span>
+        <span class="top-bar-item"><i class="fas fa-seedling"></i> 100% Farm-Direct Seasonal Harvest Guides</span>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-item"><i class="fas fa-book-open"></i> Over 180+ Tested Culinary Monographs</span>
+        <a href="contact.html" style="color:#FAF7F2; text-decoration:underline; margin-left:8px;">Join Supper Guild</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.php" class="brand-logo">
+        <div class="brand-logo-icon"><i class="fas fa-utensils"></i></div>
+        <span>HeartyMealStar</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.php" class="nav-link ">Home</a></li>
+          <li><a href="about.html" class="nav-link ">Our Heritage</a></li>
+          <li><a href="blog.html" class="nav-link ">Culinary Guides</a></li>
+          <li><a href="index.php#configurator" class="nav-link">Dinner Planner</a></li>
+          <li><a href="index.php#techniques" class="nav-link">Techniques</a></li>
+          <li><a href="index.php#faq" class="nav-link">FAQ</a></li>
+          <li><a href="contact.html" class="nav-link ">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="searchModalTrigger" class="icon-btn" aria-label="Search Recipes"><i class="fas fa-search"></i></button>
+        <button id="themeToggleBtn" class="icon-btn" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+        <a href="blog.html" class="btn btn-primary btn-sm">Explore Recipes</a>
+        <button id="mobileMenuToggle" class="icon-btn hamburger-btn" aria-label="Open Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="drawerOverlay" class="drawer-overlay"></div>
+  <div id="mobileDrawer" class="mobile-drawer">
+    <div class="mobile-drawer-header">
+      <a href="index.php" class="brand-logo">
+        <div class="brand-logo-icon"><i class="fas fa-utensils"></i></div>
+        <span>HeartyMealStar</span>
+      </a>
+      <button id="drawerCloseBtn" class="icon-btn" aria-label="Close Menu"><i class="fas fa-times"></i></button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.php">Home</a></li>
+      <li><a href="about.html">Our Heritage</a></li>
+      <li><a href="blog.html">Culinary Guides</a></li>
+      <li><a href="index.php#configurator">Dinner Planner</a></li>
+      <li><a href="index.php#techniques">Techniques</a></li>
+      <li><a href="index.php#faq">FAQ</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div style="margin-top:auto; padding-top:2rem;">
+      <a href="blog.html" class="btn btn-primary" style="width:100%;">View All Guides</a>
+    </div>
+  </div>
+
+  <!-- Search Modal Overlay -->
+  <div id="searchModalOverlay" class="modal-overlay">
+    <div class="search-modal-box">
+      <div class="search-input-header">
+        <i class="fas fa-search" style="color:var(--primary); margin-right:12px; font-size:1.2rem;"></i>
+        <input type="text" id="liveSearchInput" placeholder="Search braises, cast iron techniques, reductions...">
+        <button id="searchCloseBtn" class="icon-btn" style="border:none; background:none;" aria-label="Close search"><i class="fas fa-times"></i></button>
+      </div>
+      <div id="searchResultsContainer" class="search-results-list">
+        <p style="color:var(--text-muted); font-size:0.88rem;">Type a culinary keyword or browse popular topics...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Disclaimer Hero -->
+  <section class="section section-alt" style="padding: 4.5rem 0 3.5rem 0;">
+    <div class="container text-center" style="max-width:860px; margin:0 auto;">
+      <span class="badge"><i class="fas fa-triangle-exclamation"></i> Culinary Guidance</span>
+      <h1>Culinary & Kitchen Safety Disclaimer</h1>
+      <p class="section-subtitle">
+        Important health, temperature safety, and allergy disclosures for home cooks.
+      </p>
+    </div>
+  </section>
+
+  <!-- Disclaimer Content -->
+  <section class="section section-surface">
+    <div class="container container-narrow article-content">
+      <h2>1. Educational & Informational Purpose</h2>
+      <p>
+        The recipes, thermal guides, cooking durations, internal temperature charts, and culinary monographs published on HeartyMealStar are provided solely for educational, informational, and culinary entertainment purposes. They reflect our test kitchen experiences, scientific literature reviews, and traditional hearth cooking methods.
+      </p>
+
+      <h2>2. Food Safety & Internal Temperature Guidance</h2>
+      <p>
+        Proper food handling, sanitation, and temperature control are vital to preventing foodborne illnesses. While our guides discuss traditional culinary Doneness preferences (such as medium-rare roasts or slow braises), we strongly advise all home cooks to consult the official guidelines established by the United States Department of Agriculture (USDA) and local public health authorities.
+      </p>
+      <div class="callout callout-secondary">
+        <div class="callout-title"><i class="fas fa-temperature-high"></i> USDA Recommended Safe Internal Temperatures</div>
+        <ul style="margin:0; padding-left:1.25rem; font-size:0.9rem;">
+          <li><strong>Poultry (Whole, Thighs, Breasts):</strong> 165°F (74°C)</li>
+          <li><strong>Ground Meats (Beef, Pork, Lamb):</strong> 160°F (71°C)</li>
+          <li><strong>Whole Cuts of Beef, Pork, Lamb (with 3-min rest):</strong> 145°F (63°C)</li>
+          <li><strong>Fish & Shellfish:</strong> 145°F (63°C) or until opaque and flaky</li>
+          <li><strong>Leftovers & Reheated Casseroles:</strong> 165°F (74°C)</li>
+        </ul>
+      </div>
+      <p>
+        Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of foodborne illness, particularly if you have certain pre-existing medical conditions, are pregnant, or are immunocompromised. Always verify internal core temperatures using a calibrated digital food thermometer.
+      </p>
+
+      <h2>3. Allergen Awareness & Ingredient Disclosures</h2>
+      <p>
+        Our recipes frequently incorporate natural dairy products (cultured butter, heavy cream, aged cheeses), tree nuts (toasted walnuts, pine nuts), wheat products (ancient grains, sourdough flours), and alliums (garlic, shallots, leeks).
+      </p>
+      <p>
+        It is the sole responsibility of the reader to review ingredient lists carefully, check product packaging labels for cross-contamination warnings, and substitute ingredients appropriately to accommodate personal allergies, celiac disease, lactose intolerance, or dietary restrictions. HeartyMealStar assumes no liability for adverse allergic reactions.
+      </p>
+
+      <h2>4. Heavy Kitchen Cookware & Thermal Equipment Safety</h2>
+      <p>
+        Cast iron cookware, enameled Dutch ovens, and wood-fired ovens operate at extreme temperatures and possess high thermal retention. Always use dry, heavy-duty insulated oven mitts when handling heated cast iron handles or removing lids. Never place cold liquids into a dry, scorching Dutch oven to avoid thermal shock fracturing of enamel.
+      </p>
+
+      <h2>5. Nutritional Estimates</h2>
+      <p>
+        Any nutritional data, caloric metrics, or macronutrient estimates provided alongside recipes are generated through third-party nutritional databases for informational estimation only. Nutritional values will fluctuate based on exact ingredient brands, natural fat variations in heritage livestock, and precise portioning.
+      </p>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.php" class="brand-logo">
+            <div class="brand-logo-icon"><i class="fas fa-utensils"></i></div>
+            <span>HeartyMealStar</span>
+          </a>
+          <p>
+            The premier editorial guild for artisanal dinner recipes, hearthside thermal physics, cast iron culinary mastery, and farm-to-table seasonal feasts.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-icon" aria-label="RSS Feed"><i class="fas fa-rss"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Culinary Guides</h4>
+          <ul class="footer-links">
+            <li><a href="blog/the-science-of-slow-braising-collagen-breakdown-and-gelatin-hydrolysis.html">Slow Braising & Collagen Science</a></li>
+            <li><a href="blog/cast-iron-skillet-cooking-thermal-inertia-and-maillard-crust-chemistry.html">Cast Iron Searing & Maillard Crust</a></li>
+            <li><a href="blog/artisan-sourdough-levain-fermentation-kinetics-for-dinner-breads.html">Artisan Sourdough Levain Breads</a></li>
+            <li><a href="blog/culinary-emulsion-sauces-hollandaise-veloute-and-lipid-suspensions.html">Emulsion Sauces & Monté au Beurre</a></li>
+            <li><a href="blog/wood-fired-hearth-roasting-radiant-heat-and-aromatic-smoke-physics.html">Wood-Fired Hearth Roasting</a></li>
+            <li><a href="blog/farm-to-table-seasonal-harvest-preservation-and-root-cellar-storage.html">Seasonal Root Cellar Preservation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Artisan Resources</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Our Hearth Heritage</a></li>
+            <li><a href="blog.html">Master Recipe Monographs</a></li>
+            <li><a href="index.php#configurator">Interactive Dinner Planner</a></li>
+            <li><a href="index.php#techniques">Thermal Science Matrix</a></li>
+            <li><a href="contact.html">Guild Inquiries & Support</a></li>
+            <li><a href="contact.html">Seasonal Supper Club Registration</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal & Policies</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="disclaimer.html">Culinary Disclaimer</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 HeartyMealStar. All rights reserved. Artisan Hearthside Gastronomy.
+        </div>
+        <div class="footer-legal-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="cookies.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Banner -->
+  <div id="cookieBanner" class="cookie-banner">
+    <h4><i class="fas fa-cookie-bite" style="color:var(--secondary); margin-right:6px;"></i> Cookie & Experience Settings</h4>
+    <p>
+      HeartyMealStar uses essential cookies to ensure flawless site navigation, store your theme preferences, and optimize your culinary experience.
+    </p>
+    <div class="cookie-banner-actions">
+      <button id="cookieAcceptBtn" class="btn btn-primary btn-sm">Accept All</button>
+      <button id="cookieDeclineBtn" class="btn btn-outline btn-sm">Essential Only</button>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

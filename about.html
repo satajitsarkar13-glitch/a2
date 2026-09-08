@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us & Hearth Heritage - HeartyMealStar Culinary Guild</title>
+  <meta name="description" content="Discover the philosophy, culinary team, and thermal science behind HeartyMealStar. Honoring slow hearth cooking and farm-to-table dinners.">
+  <link rel="canonical" href="https://heartymealstar.com/about.html">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0LY0HY7L01"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0LY0HY7L01');
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div id="readingProgressBar" class="reading-progress-bar"></div>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <span class="top-bar-item"><i class="fas fa-fire-burner"></i> Autumn Hearthside Supper Guild Now Open</span>
+        <span class="top-bar-item"><i class="fas fa-seedling"></i> 100% Farm-Direct Seasonal Harvest Guides</span>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-item"><i class="fas fa-book-open"></i> Over 180+ Tested Culinary Monographs</span>
+        <a href="contact.html" style="color:#FAF7F2; text-decoration:underline; margin-left:8px;">Join Supper Guild</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.php" class="brand-logo">
+        <div class="brand-logo-icon"><i class="fas fa-utensils"></i></div>
+        <span>HeartyMealStar</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.php" class="nav-link ">Home</a></li>
+          <li><a href="about.html" class="nav-link active">Our Heritage</a></li>
+          <li><a href="blog.html" class="nav-link ">Culinary Guides</a></li>
+          <li><a href="index.php#configurator" class="nav-link">Dinner Planner</a></li>
+          <li><a href="index.php#techniques" class="nav-link">Techniques</a></li>
+          <li><a href="index.php#faq" class="nav-link">FAQ</a></li>
+          <li><a href="contact.html" class="nav-link ">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="searchModalTrigger" class="icon-btn" aria-label="Search Recipes"><i class="fas fa-search"></i></button>
+        <button id="themeToggleBtn" class="icon-btn" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+        <a href="blog.html" class="btn btn-primary btn-sm">Explore Recipes</a>
+        <button id="mobileMenuToggle" class="icon-btn hamburger-btn" aria-label="Open Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="drawerOverlay" class="drawer-overlay"></div>
+  <div id="mobileDrawer" class="mobile-drawer">
+    <div class="mobile-drawer-header">
+      <a href="index.php" class="brand-logo">
+        <div class="brand-logo-icon"><i class="fas fa-utensils"></i></div>
+        <span>HeartyMealStar</span>
+      </a>
+      <button id="drawerCloseBtn" class="icon-btn" aria-label="Close Menu"><i class="fas fa-times"></i></button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.php">Home</a></li>
+      <li><a href="about.html">Our Heritage</a></li>
+      <li><a href="blog.html">Culinary Guides</a></li>
+      <li><a href="index.php#configurator">Dinner Planner</a></li>
+      <li><a href="index.php#techniques">Techniques</a></li>
+      <li><a href="index.php#faq">FAQ</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div style="margin-top:auto; padding-top:2rem;">
+      <a href="blog.html" class="btn btn-primary" style="width:100%;">View All Guides</a>
+    </div>
+  </div>
+
+  <!-- Search Modal Overlay -->
+  <div id="searchModalOverlay" class="modal-overlay">
+    <div class="search-modal-box">
+      <div class="search-input-header">
+        <i class="fas fa-search" style="color:var(--primary); margin-right:12px; font-size:1.2rem;"></i>
+        <input type="text" id="liveSearchInput" placeholder="Search braises, cast iron techniques, reductions...">
+        <button id="searchCloseBtn" class="icon-btn" style="border:none; background:none;" aria-label="Close search"><i class="fas fa-times"></i></button>
+      </div>
+      <div id="searchResultsContainer" class="search-results-list">
+        <p style="color:var(--text-muted); font-size:0.88rem;">Type a culinary keyword or browse popular topics...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Hero -->
+  <section class="section section-alt" style="padding: 4.5rem 0 3.5rem 0;">
+    <div class="container text-center" style="max-width:860px; margin:0 auto;">
+      <span class="badge"><i class="fas fa-fire"></i> Our Heritage & Purpose</span>
+      <h1>Reviving the Soulful Gathering of the Hearthside Dinner Table</h1>
+      <p class="section-subtitle">
+        Founded on the timeless principles of slow thermal cooking, artisanal fermentation, and deep culinary science, HeartyMealStar exists to elevate the home evening meal into an enduring sanctuary of nourishment and joy.
+      </p>
+    </div>
+  </section>
+
+  <!-- Narrative Section 1 -->
+  <section class="section section-surface">
+    <div class="container">
+      <div class="grid-2" style="align-items:center;">
+        <div>
+          <span class="badge badge-secondary"><i class="fas fa-history"></i> The Genesis</span>
+          <h2>Where Ancient Fire Meets Modern Food Science</h2>
+          <p>
+            In a fast-paced world dominated by instant shortcuts and ultra-processed convenience, the ritual of the evening dinner has too often been diminished. HeartyMealStar was conceived by a collaborative circle of hearth pitmasters, food biophysicists, and heritage farmers who believed that dinner is not merely fuel—it is the foundational centerpiece of human connection.
+          </p>
+          <p>
+            We realized that true culinary confidence does not stem from blind recipe following, but from a profound understanding of thermal dynamics. When you comprehend why collagen converts to silky gelatin at 180°F, or how cast iron's high volumetric heat capacity prevents pan cooling during a sear, cooking ceases to be stressful guesswork and transforms into an intuitive, deeply rewarding art form.
+          </p>
+          <p>
+            Every guide published in our library represents dozens of kitchen trials, calibrated thermometers, and meticulous flavor balancing to ensure that when you step into your kitchen, your evening feast emerges flawlessly.
+          </p>
+        </div>
+        <div>
+          <div style="border-radius:var(--radius-xl); overflow:hidden; border:4px solid var(--border); box-shadow:var(--shadow-lg);">
+            <img src="images/dinner-botanical-table-setting.jpg" alt="Artisanal dinner table setting with warm candlelight and botanical decor" width="1200" height="800">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Pillars -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge-sage"><i class="fas fa-gem"></i> Guiding Principles</span>
+        <h2 class="section-title">The Three Pillars of Our Culinary Guild</h2>
+        <p class="section-subtitle">
+          Everything we publish and teach adheres to our rigorous trinity of culinary values.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="feature-card">
+          <div class="feature-icon-wrapper"><i class="fas fa-scale-balanced"></i></div>
+          <h3>Thermal Precision</h3>
+          <p>
+            We demystify heat transfer. From convective oven roasting and conductive cast iron searing to gentle conductive simmer poaching, we give home cooks exact temperature milestones, internal probe targets, and timing formulas.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper"><i class="fas fa-leaf"></i></div>
+          <h3>Regenerative Provenance</h3>
+          <p>
+            We advocate for heritage livestock, stone-milled ancient grains, and seasonal organic harvests. By honoring seasonal availability, your ingredients arrive at the stove with maximum natural sugars, aromatics, and nutrients.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper"><i class="fas fa-users-rays"></i></div>
+          <h3>Hearthside Fellowship</h3>
+          <p>
+            We believe the greatest dinners are communal. Our recipes are designed for generous sharing—magnificent Dutch oven braises placed directly in the center of the table, crusty sourdough loaves passed hand to hand, and deep conversation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Editorial Rigor -->
+  <section class="section section-surface">
+    <div class="container">
+      <div class="grid-2" style="align-items:center;">
+        <div>
+          <div style="border-radius:var(--radius-xl); overflow:hidden; border:4px solid var(--border); box-shadow:var(--shadow-lg);">
+            <img src="images/dinner-chef-plating-gourmet-sauce.jpg" alt="Master chef meticulously plating satin reduction sauce" width="1200" height="800">
+          </div>
+        </div>
+        <div>
+          <span class="badge"><i class="fas fa-check-double"></i> Editorial Standards</span>
+          <h2>Zero Compromise Recipe Testing Protocol</h2>
+          <p>
+            Unlike automated content aggregators, every single guide on HeartyMealStar undergoes a strict three-tier verification process:
+          </p>
+          <ul style="padding-left:1.5rem; color:var(--text-muted); margin-bottom:1.5rem; line-height:1.7;">
+            <li><strong>Laboratory Thermal Verification:</strong> Core meat temperatures, starch gelatinization curves, and moisture retention metrics are recorded with calibrated probes.</li>
+            <li><strong>Residential Kitchen Testing:</strong> Protocols are executed across gas, electric, and induction ranges using standard cast iron skillets to guarantee foolproof reproducibility.</li>
+            <li><strong>Sensory & Acid Balancing:</strong> Sauces, reductions, and levain breads are evaluated for mouthfeel, balance of natural acidity, and aroma retention.</li>
+          </ul>
+          <div class="callout callout-secondary">
+            <div class="callout-title"><i class="fas fa-shield-halved"></i> Our Promise to Home Cooks</div>
+            <p>
+              We never promote artificial flavorings, shortcut powders, or unverified techniques. If a dinner technique appears on HeartyMealStar, you can trust it unconditionally for your most cherished family gatherings.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.php" class="brand-logo">
+            <div class="brand-logo-icon"><i class="fas fa-utensils"></i></div>
+            <span>HeartyMealStar</span>
+          </a>
+          <p>
+            The premier editorial guild for artisanal dinner recipes, hearthside thermal physics, cast iron culinary mastery, and farm-to-table seasonal feasts.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-icon" aria-label="RSS Feed"><i class="fas fa-rss"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Culinary Guides</h4>
+          <ul class="footer-links">
+            <li><a href="blog/the-science-of-slow-braising-collagen-breakdown-and-gelatin-hydrolysis.html">Slow Braising & Collagen Science</a></li>
+            <li><a href="blog/cast-iron-skillet-cooking-thermal-inertia-and-maillard-crust-chemistry.html">Cast Iron Searing & Maillard Crust</a></li>
+            <li><a href="blog/artisan-sourdough-levain-fermentation-kinetics-for-dinner-breads.html">Artisan Sourdough Levain Breads</a></li>
+            <li><a href="blog/culinary-emulsion-sauces-hollandaise-veloute-and-lipid-suspensions.html">Emulsion Sauces & Monté au Beurre</a></li>
+            <li><a href="blog/wood-fired-hearth-roasting-radiant-heat-and-aromatic-smoke-physics.html">Wood-Fired Hearth Roasting</a></li>
+            <li><a href="blog/farm-to-table-seasonal-harvest-preservation-and-root-cellar-storage.html">Seasonal Root Cellar Preservation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Artisan Resources</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Our Hearth Heritage</a></li>
+            <li><a href="blog.html">Master Recipe Monographs</a></li>
+            <li><a href="index.php#configurator">Interactive Dinner Planner</a></li>
+            <li><a href="index.php#techniques">Thermal Science Matrix</a></li>
+            <li><a href="contact.html">Guild Inquiries & Support</a></li>
+            <li><a href="contact.html">Seasonal Supper Club Registration</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal & Policies</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="disclaimer.html">Culinary Disclaimer</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 HeartyMealStar. All rights reserved. Artisan Hearthside Gastronomy.
+        </div>
+        <div class="footer-legal-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="cookies.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Banner -->
+  <div id="cookieBanner" class="cookie-banner">
+    <h4><i class="fas fa-cookie-bite" style="color:var(--secondary); margin-right:6px;"></i> Cookie & Experience Settings</h4>
+    <p>
+      HeartyMealStar uses essential cookies to ensure flawless site navigation, store your theme preferences, and optimize your culinary experience.
+    </p>
+    <div class="cookie-banner-actions">
+      <button id="cookieAcceptBtn" class="btn btn-primary btn-sm">Accept All</button>
+      <button id="cookieDeclineBtn" class="btn btn-outline btn-sm">Essential Only</button>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

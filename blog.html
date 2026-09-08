@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artisan Dinner Recipes & Culinary Treatises - HeartyMealStar</title>
+  <meta name="description" content="Browse all 6 comprehensive culinary monographs covering collagen braising, cast iron searing, sourdough baking, and emulsion reductions.">
+  <link rel="canonical" href="https://heartymealstar.com/blog.html">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0LY0HY7L01"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0LY0HY7L01');
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div id="readingProgressBar" class="reading-progress-bar"></div>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <span class="top-bar-item"><i class="fas fa-fire-burner"></i> Autumn Hearthside Supper Guild Now Open</span>
+        <span class="top-bar-item"><i class="fas fa-seedling"></i> 100% Farm-Direct Seasonal Harvest Guides</span>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-item"><i class="fas fa-book-open"></i> Over 180+ Tested Culinary Monographs</span>
+        <a href="contact.html" style="color:#FAF7F2; text-decoration:underline; margin-left:8px;">Join Supper Guild</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.php" class="brand-logo">
+        <div class="brand-logo-icon"><i class="fas fa-utensils"></i></div>
+        <span>HeartyMealStar</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.php" class="nav-link ">Home</a></li>
+          <li><a href="about.html" class="nav-link ">Our Heritage</a></li>
+          <li><a href="blog.html" class="nav-link active">Culinary Guides</a></li>
+          <li><a href="index.php#configurator" class="nav-link">Dinner Planner</a></li>
+          <li><a href="index.php#techniques" class="nav-link">Techniques</a></li>
+          <li><a href="index.php#faq" class="nav-link">FAQ</a></li>
+          <li><a href="contact.html" class="nav-link ">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="searchModalTrigger" class="icon-btn" aria-label="Search Recipes"><i class="fas fa-search"></i></button>
+        <button id="themeToggleBtn" class="icon-btn" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+        <a href="blog.html" class="btn btn-primary btn-sm">Explore Recipes</a>
+        <button id="mobileMenuToggle" class="icon-btn hamburger-btn" aria-label="Open Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="drawerOverlay" class="drawer-overlay"></div>
+  <div id="mobileDrawer" class="mobile-drawer">
+    <div class="mobile-drawer-header">
+      <a href="index.php" class="brand-logo">
+        <div class="brand-logo-icon"><i class="fas fa-utensils"></i></div>
+        <span>HeartyMealStar</span>
+      </a>
+      <button id="drawerCloseBtn" class="icon-btn" aria-label="Close Menu"><i class="fas fa-times"></i></button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.php">Home</a></li>
+      <li><a href="about.html">Our Heritage</a></li>
+      <li><a href="blog.html">Culinary Guides</a></li>
+      <li><a href="index.php#configurator">Dinner Planner</a></li>
+      <li><a href="index.php#techniques">Techniques</a></li>
+      <li><a href="index.php#faq">FAQ</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div style="margin-top:auto; padding-top:2rem;">
+      <a href="blog.html" class="btn btn-primary" style="width:100%;">View All Guides</a>
+    </div>
+  </div>
+
+  <!-- Search Modal Overlay -->
+  <div id="searchModalOverlay" class="modal-overlay">
+    <div class="search-modal-box">
+      <div class="search-input-header">
+        <i class="fas fa-search" style="color:var(--primary); margin-right:12px; font-size:1.2rem;"></i>
+        <input type="text" id="liveSearchInput" placeholder="Search braises, cast iron techniques, reductions...">
+        <button id="searchCloseBtn" class="icon-btn" style="border:none; background:none;" aria-label="Close search"><i class="fas fa-times"></i></button>
+      </div>
+      <div id="searchResultsContainer" class="search-results-list">
+        <p style="color:var(--text-muted); font-size:0.88rem;">Type a culinary keyword or browse popular topics...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog Hero -->
+  <section class="section section-alt" style="padding: 4.5rem 0 3.5rem 0;">
+    <div class="container text-center" style="max-width:860px; margin:0 auto;">
+      <span class="badge"><i class="fas fa-book-open"></i> Culinary Monographs & Guides</span>
+      <h1>Artisan Hearthside Dinner Treatises & Recipes</h1>
+      <p class="section-subtitle">
+        Explore our exhaustive culinary monographs. Each treatise combines deep thermal science, ingredient chemistry, step-by-step masterclasses, and exact ratios for home kitchen mastery.
+      </p>
+    </div>
+  </section>
+
+  <!-- Blog Listing Grid -->
+  <section class="section section-surface">
+    <div class="container">
+      <div class="grid-3">
+        <!-- Post 1 -->
+        <div class="recipe-card">
+          <div class="recipe-card-media">
+            <img src="images/dinner-slow-cooker-chili-pot.jpg" alt="Rich slow braised beef shank and short ribs in Dutch oven" width="600" height="400">
+            <span class="recipe-tag">Slow Braising</span>
+            <span class="recipe-time-badge"><i class="far fa-clock"></i> 14 Min Read</span>
+          </div>
+          <div class="recipe-card-body">
+            <div class="recipe-meta-row">
+              <span><i class="fas fa-user-pen"></i> Dr. Evelyn Thorne</span>
+              <span><i class="far fa-calendar"></i> Autumn 2026</span>
+            </div>
+            <h3 class="recipe-card-title"><a href="blog/the-science-of-slow-braising-collagen-breakdown-and-gelatin-hydrolysis.html">The Science of Slow Braising: Collagen Breakdown & Gelatin Hydrolysis</a></h3>
+            <p class="recipe-card-text">
+              An exhaustive scientific deep-dive into how collagen peptide chains denature and convert into silky gelatin between 160°F and 190°F during low-temperature Dutch oven braising.
+            </p>
+            <a href="blog/the-science-of-slow-braising-collagen-breakdown-and-gelatin-hydrolysis.html" class="btn btn-primary btn-sm">Read Full Treatise <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="recipe-card">
+          <div class="recipe-card-media">
+            <img src="images/dinner-castiron-cornbread-skillet.jpg" alt="Cast iron skillet searing on open flame with deep crust" width="600" height="400">
+            <span class="recipe-tag">Cast Iron Chemistry</span>
+            <span class="recipe-time-badge"><i class="far fa-clock"></i> 12 Min Read</span>
+          </div>
+          <div class="recipe-card-body">
+            <div class="recipe-meta-row">
+              <span><i class="fas fa-user-pen"></i> Chef Alistair Vance</span>
+              <span><i class="far fa-calendar"></i> Autumn 2026</span>
+            </div>
+            <h3 class="recipe-card-title"><a href="blog/cast-iron-skillet-cooking-thermal-inertia-and-maillard-crust-chemistry.html">Cast Iron Skillet Cooking: Thermal Inertia & Maillard Crust Chemistry</a></h3>
+            <p class="recipe-card-text">
+              Mastering the volumetric heat retention of raw cast iron to trigger rapid amino-sugar caramelization, maintain skillet surface temperature, and harvest aromatic pan fond.
+            </p>
+            <a href="blog/cast-iron-skillet-cooking-thermal-inertia-and-maillard-crust-chemistry.html" class="btn btn-primary btn-sm">Read Full Treatise <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="recipe-card">
+          <div class="recipe-card-media">
+            <img src="images/dinner-artisan-rustic-boule-bread.jpg" alt="Crusty artisan sourdough boule bread on cutting board" width="600" height="400">
+            <span class="recipe-tag">Hearth Bakery</span>
+            <span class="recipe-time-badge"><i class="far fa-clock"></i> 15 Min Read</span>
+          </div>
+          <div class="recipe-card-body">
+            <div class="recipe-meta-row">
+              <span><i class="fas fa-user-pen"></i> Marianne Sommer</span>
+              <span><i class="far fa-calendar"></i> Autumn 2026</span>
+            </div>
+            <h3 class="recipe-card-title"><a href="blog/artisan-sourdough-levain-fermentation-kinetics-for-dinner-breads.html">Artisan Sourdough Levain: Fermentation Kinetics for Dinner Breads</a></h3>
+            <p class="recipe-card-text">
+              A masterclass on wild lactic fermentation, open crumb architecture, steam-injected Dutch oven baking, and pairing acidic artisan loaves with rich dinner reductions.
+            </p>
+            <a href="blog/artisan-sourdough-levain-fermentation-kinetics-for-dinner-breads.html" class="btn btn-primary btn-sm">Read Full Treatise <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Post 4 -->
+        <div class="recipe-card">
+          <div class="recipe-card-media">
+            <img src="images/dinner-chef-plating-gourmet-sauce.jpg" alt="Chef whisking velvety emulsion sauce with fresh herbs" width="600" height="400">
+            <span class="recipe-tag">Sauce Chemistry</span>
+            <span class="recipe-time-badge"><i class="far fa-clock"></i> 13 Min Read</span>
+          </div>
+          <div class="recipe-card-body">
+            <div class="recipe-meta-row">
+              <span><i class="fas fa-user-pen"></i> Marcus Sterling</span>
+              <span><i class="far fa-calendar"></i> Autumn 2026</span>
+            </div>
+            <h3 class="recipe-card-title"><a href="blog/culinary-emulsion-sauces-hollandaise-veloute-and-lipid-suspensions.html">Culinary Emulsion Sauces: Velouté, Monté au Beurre & Lipid Suspensions</a></h3>
+            <p class="recipe-card-text">
+              Unlocking the colloid physics of stable butter emulsions, deglazing fond with non-alcoholic grape musts, and crafting glossy, restaurant-grade pan finishes.
+            </p>
+            <a href="blog/culinary-emulsion-sauces-hollandaise-veloute-and-lipid-suspensions.html" class="btn btn-primary btn-sm">Read Full Treatise <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Post 5 -->
+        <div class="recipe-card">
+          <div class="recipe-card-media">
+            <img src="images/dinner-copper-pots-kitchen-line.jpg" alt="Wood-fired hearth roasting whole poultry with aromatic hardwoods" width="600" height="400">
+            <span class="recipe-tag">Hearth Roasting</span>
+            <span class="recipe-time-badge"><i class="far fa-clock"></i> 14 Min Read</span>
+          </div>
+          <div class="recipe-card-body">
+            <div class="recipe-meta-row">
+              <span><i class="fas fa-user-pen"></i> Chef Alistair Vance</span>
+              <span><i class="far fa-calendar"></i> Autumn 2026</span>
+            </div>
+            <h3 class="recipe-card-title"><a href="blog/wood-fired-hearth-roasting-radiant-heat-and-aromatic-smoke-physics.html">Wood-Fired Hearth Roasting: Radiant Heat & Aromatic Smoke Physics</a></h3>
+            <p class="recipe-card-text">
+              Harnessing hardwood timber species, radiant thermal envelopes, and volatile phenolic smoke compounds to impart deep caramel notes to whole evening roasts.
+            </p>
+            <a href="blog/wood-fired-hearth-roasting-radiant-heat-and-aromatic-smoke-physics.html" class="btn btn-primary btn-sm">Read Full Treatise <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Post 6 -->
+        <div class="recipe-card">
+          <div class="recipe-card-media">
+            <img src="images/dinner-roasted-root-vegetables-pan.jpg" alt="Seasonal root harvest vegetables roasting on cast iron tray" width="600" height="400">
+            <span class="recipe-tag">Farm & Harvest</span>
+            <span class="recipe-time-badge"><i class="far fa-clock"></i> 13 Min Read</span>
+          </div>
+          <div class="recipe-card-body">
+            <div class="recipe-meta-row">
+              <span><i class="fas fa-user-pen"></i> Marcus Sterling</span>
+              <span><i class="far fa-calendar"></i> Autumn 2026</span>
+            </div>
+            <h3 class="recipe-card-title"><a href="blog/farm-to-table-seasonal-harvest-preservation-and-root-cellar-storage.html">Farm-to-Table Seasonal Harvest Preservation & Root Cellar Storage</a></h3>
+            <p class="recipe-card-text">
+              Managing cellar microclimates, cold storage starch-to-sugar enzymatic conversion, lacto-fermentation protocols, and crafting hearty cold-season dinner menus.
+            </p>
+            <a href="blog/farm-to-table-seasonal-harvest-preservation-and-root-cellar-storage.html" class="btn btn-primary btn-sm">Read Full Treatise <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.php" class="brand-logo">
+            <div class="brand-logo-icon"><i class="fas fa-utensils"></i></div>
+            <span>HeartyMealStar</span>
+          </a>
+          <p>
+            The premier editorial guild for artisanal dinner recipes, hearthside thermal physics, cast iron culinary mastery, and farm-to-table seasonal feasts.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-icon" aria-label="RSS Feed"><i class="fas fa-rss"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Culinary Guides</h4>
+          <ul class="footer-links">
+            <li><a href="blog/the-science-of-slow-braising-collagen-breakdown-and-gelatin-hydrolysis.html">Slow Braising & Collagen Science</a></li>
+            <li><a href="blog/cast-iron-skillet-cooking-thermal-inertia-and-maillard-crust-chemistry.html">Cast Iron Searing & Maillard Crust</a></li>
+            <li><a href="blog/artisan-sourdough-levain-fermentation-kinetics-for-dinner-breads.html">Artisan Sourdough Levain Breads</a></li>
+            <li><a href="blog/culinary-emulsion-sauces-hollandaise-veloute-and-lipid-suspensions.html">Emulsion Sauces & Monté au Beurre</a></li>
+            <li><a href="blog/wood-fired-hearth-roasting-radiant-heat-and-aromatic-smoke-physics.html">Wood-Fired Hearth Roasting</a></li>
+            <li><a href="blog/farm-to-table-seasonal-harvest-preservation-and-root-cellar-storage.html">Seasonal Root Cellar Preservation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Artisan Resources</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Our Hearth Heritage</a></li>
+            <li><a href="blog.html">Master Recipe Monographs</a></li>
+            <li><a href="index.php#configurator">Interactive Dinner Planner</a></li>
+            <li><a href="index.php#techniques">Thermal Science Matrix</a></li>
+            <li><a href="contact.html">Guild Inquiries & Support</a></li>
+            <li><a href="contact.html">Seasonal Supper Club Registration</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal & Policies</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="disclaimer.html">Culinary Disclaimer</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 HeartyMealStar. All rights reserved. Artisan Hearthside Gastronomy.
+        </div>
+        <div class="footer-legal-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="cookies.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Banner -->
+  <div id="cookieBanner" class="cookie-banner">
+    <h4><i class="fas fa-cookie-bite" style="color:var(--secondary); margin-right:6px;"></i> Cookie & Experience Settings</h4>
+    <p>
+      HeartyMealStar uses essential cookies to ensure flawless site navigation, store your theme preferences, and optimize your culinary experience.
+    </p>
+    <div class="cookie-banner-actions">
+      <button id="cookieAcceptBtn" class="btn btn-primary btn-sm">Accept All</button>
+      <button id="cookieDeclineBtn" class="btn btn-outline btn-sm">Essential Only</button>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
